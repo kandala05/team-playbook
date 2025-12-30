@@ -1,13 +1,15 @@
-# Dependencies
-node_modules/
-
 # Build output
 dist/
 .astro/
 
+# Dependencies
+node_modules/
+.pnpm-store/
+
 # Environment variables
 .env
 .env.*
+*.local
 
 # Logs
 npm-debug.log*
@@ -17,7 +19,10 @@ pnpm-debug.log*
 
 # OS-specific
 .DS_Store
+Thumbs.db
 
 # IDEs
 .vscode/
 .idea/
+*.swp
+*.swo

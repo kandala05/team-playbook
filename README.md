@@ -1,49 +1,77 @@
-# Starlight Starter Kit: Basics
+# Team Playbook
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+A documentation-first approach to software development, built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
-```
-pnpm create astro@latest -- --template starlight
-```
+## Philosophy
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This playbook establishes our team's **Documentation-First, AI-Augmented** workflow:
 
-## 🚀 Project Structure
+- Every project begins with a `MANIFEST.md` and a V0 Documentation Site
+- Documentation serves two audiences: humans (tutorials, how-tos) and LLMs (explanations, references)
+- The docs act as a "context engine" for AI-assisted code generation
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Project Structure
 
 ```
 .
-├── public/
+├── public/              # Static assets (favicon, etc.)
 ├── src/
-│   ├── assets/
+│   ├── assets/          # Images and other assets
 │   ├── content/
-│   │   └── docs/
+│   │   └── docs/        # Documentation pages (.md/.mdx)
 │   └── content.config.ts
 ├── astro.config.mjs
 ├── package.json
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Getting Started
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+### Prerequisites
 
-Static assets, like favicons, can be placed in the `public/` directory.
+- Node.js 18.20.8, ^20.3.0, or >=22.0.0
+- pnpm (recommended)
 
-## 🧞 Commands
+### Installation
 
-All commands are run from the root of the project, from a terminal:
+```bash
+pnpm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+### Development
 
-## 👀 Want to learn more?
+```bash
+pnpm dev
+```
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Starts the dev server at `localhost:4321`.
+
+### Build
+
+```bash
+pnpm build
+```
+
+Builds the production site to `./dist/`.
+
+### Preview
+
+```bash
+pnpm preview
+```
+
+Preview the production build locally.
+
+## Documentation Structure
+
+The docs follow the [Diataxis](https://diataxis.fr/) framework:
+
+- **Explanation** - Conceptual understanding (e.g., Manifest Philosophy)
+- **Reference** - Structured information lookup (e.g., MANIFEST.md Template)
+- **How-to** - Step-by-step guides (e.g., Bootstrapping a Project)
+- **Guides** - User workflows and tutorials
+
+## Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [Starlight Documentation](https://starlight.astro.build)
