@@ -1,40 +1,44 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Team Playbook
+description: Documentation-First, AI-Augmented software development standards
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: Build better software with documentation that serves both humans and AI
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /team-playbook/how-to/bootstrap/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Read the Philosophy
+      link: /team-playbook/explanation/manifest-philosophy/
+      icon: open-book
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Core Principles
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Documentation-First" icon="document">
+    V0 documentation exists before V1 code. Define intent and architecture before implementation.
+  </Card>
+  <Card title="AI-Augmented" icon="seti:robot">
+    Documentation serves both human developers and LLM assistants for context-aware coding.
+  </Card>
+  <Card title="Diataxis Framework" icon="open-book">
+    All content organized as Explanation, Reference, How-to, and Tutorials.
+  </Card>
+  <Card title="Standards-Driven" icon="setting">
+    Every project follows the MANIFEST.md template for consistency across teams.
+  </Card>
+</CardGrid>
+
+## Quick Links
+
+<CardGrid>
+  <Card title="Bootstrap a Project" icon="rocket">
+    [Step-by-step guide](/team-playbook/how-to/bootstrap/) to create a new project following team standards.
+  </Card>
+  <Card title="MANIFEST Template" icon="pencil">
+    [Reference template](/team-playbook/reference/manifest-template/) for structuring your project's MANIFEST.md.
+  </Card>
 </CardGrid>

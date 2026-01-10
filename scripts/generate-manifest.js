@@ -1,0 +1,68 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const manifest = {
+  name: "team-playbook",
+  version: "1.0.0",
+  description: "Documentation-First, AI-Augmented software development standards",
+  repository: "https://github.com/kandala05/team-playbook",
+  documentation: {
+    framework: "diataxis",
+    sections: {
+      explanation: {
+        description: "Conceptual understanding and philosophy",
+        files: [
+          {
+            path: "/explanation/manifest-philosophy/",
+            title: "The Manifest Philosophy",
+            summary: "Documentation-First, AI-Augmented workflow",
+            aiContext: "Read this first to understand the team's development philosophy"
+          }
+        ]
+      },
+      reference: {
+        description: "Templates and specifications",
+        files: [
+          {
+            path: "/reference/manifest-template/",
+            title: "MANIFEST.md Template",
+            summary: "Standard template for project manifests",
+            aiContext: "Use this template for all new projects"
+          }
+        ]
+      },
+      howto: {
+        description: "Step-by-step implementation guides",
+        files: [
+          {
+            path: "/how-to/bootstrap/",
+            title: "Bootstrap a New Project",
+            summary: "Creating a project following team standards",
+            aiContext: "Reference for project initialization workflow"
+          }
+        ]
+      }
+    }
+  },
+  aiGuidance: {
+    primaryContext: [
+      "/explanation/manifest-philosophy/",
+      "/reference/manifest-template/"
+    ],
+    codingStandards: "/reference/standards/",
+    patterns: "/explanation/patterns/"
+  },
+  metadata: {
+    plane: "developer-control-plane",
+    capability: "engineering-standards",
+    tags: ["platform-engineering", "documentation", "standards"],
+    lastUpdated: new Date().toISOString()
+  }
+};
+
+const outputPath = path.join(__dirname, '../public/manifest.json');
+fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2));
+console.log('Generated manifest.json');
