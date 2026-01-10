@@ -4,21 +4,32 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com", // TODO: Update with your actual domain
+  site: "https://kandala05.github.io",
+  base: "/team-playbook", // This matches your repo name
   integrations: [
     starlight({
       title: "Team Playbook",
+      description: "Documentation-First, AI-Augmented software development standards",
       social: [
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/phanidhar/team-playbook",
+          href: "https://github.com/kandala05/team-playbook",
         },
       ],
       sidebar: [
         {
           label: "Philosophy",
-          link: "/explanation/manifest-philosophy/",
+          items: [
+            {
+              label: "Manifest Philosophy",
+              link: "/explanation/manifest-philosophy/",
+            },
+            {
+              label: "Documentation-First Approach",
+              link: "/explanation/docs-first/",
+            },
+          ],
         },
         {
           label: "Reference",
@@ -27,17 +38,32 @@ export default defineConfig({
               label: "MANIFEST.md Template",
               link: "/reference/manifest-template/",
             },
-          ],
-        },
-        {
-          label: "Guides",
-          items: [
             {
-              label: "Bootstrapping a Project",
-              link: "/how-to/bootstrap/",
+              label: "Project Structure",
+              link: "/reference/project-structure/",
             },
           ],
         },
+        {
+          label: "How-To Guides",
+          items: [
+            {
+              label: "Bootstrap a New Project",
+              link: "/how-to/bootstrap/",
+            },
+            {
+              label: "Configure AI Assistant Context",
+              link: "/how-to/ai-context/",
+            },
+          ],
+        },
+        {
+          label: "About",
+          link: "/about/",
+        },
+      ],
+      customCss: [
+        // You can add custom CSS here later
       ],
     }),
   ],
