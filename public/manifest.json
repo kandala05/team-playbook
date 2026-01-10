@@ -25,6 +25,12 @@
             "title": "MANIFEST.md Template",
             "summary": "Standard template for project manifests",
             "aiContext": "Use this template for all new projects"
+          },
+          {
+            "path": "/reference/manifest-schema/",
+            "title": "Manifest Schema",
+            "summary": "Complete JSON schema for manifest.json",
+            "aiContext": "Reference for manifest.json structure and field definitions"
           }
         ]
       },
@@ -57,6 +63,6 @@
       "documentation",
       "standards"
     ],
-    "lastUpdated": "2026-01-10T17:24:43.652Z"
+    "lastUpdated": "2026-01-10T18:13:02.095Z"
   }
 }

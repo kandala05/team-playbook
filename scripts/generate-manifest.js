@@ -31,6 +31,12 @@ const manifest = {
             title: "MANIFEST.md Template",
             summary: "Standard template for project manifests",
             aiContext: "Use this template for all new projects"
+          },
+          {
+            path: "/reference/manifest-schema/",
+            title: "Manifest Schema",
+            summary: "Complete JSON schema for manifest.json",
+            aiContext: "Reference for manifest.json structure and field definitions"
           }
         ]
       },

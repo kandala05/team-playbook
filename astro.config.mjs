@@ -39,6 +39,10 @@ export default defineConfig({
               link: "/reference/manifest-template/",
             },
             {
+              label: "Manifest Schema",
+              link: "/reference/manifest-schema/",
+            },
+            {
               label: "Project Structure",
               link: "/reference/project-structure/",
             },
