@@ -2,10 +2,12 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+const isProd = process.env.NODE_ENV === "production";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kandala05.github.io",
-  base: "/team-playbook", // This matches your repo name
+  site: isProd ? "https://kandala05.github.io" : "http://localhost:4321",
+  base: "/team-playbook",
   integrations: [
     starlight({
       title: "Team Playbook",
@@ -24,10 +26,6 @@ export default defineConfig({
             {
               label: "Manifest Philosophy",
               link: "/explanation/manifest-philosophy/",
-            },
-            {
-              label: "Documentation-First Approach",
-              link: "/explanation/docs-first/",
             },
           ],
         },

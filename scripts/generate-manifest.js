@@ -48,6 +48,12 @@ const manifest = {
             title: "Bootstrap a New Project",
             summary: "Creating a project following team standards",
             aiContext: "Reference for project initialization workflow"
+          },
+          {
+            path: "/how-to/ai-context/",
+            title: "Configure AI Assistant Context",
+            summary: "Setting up AI assistants with project documentation",
+            aiContext: "How to configure AI tools to use manifest.json"
           }
         ]
       }

@@ -6,7 +6,9 @@ tableOfContents:
   maxHeadingLevel: 3
 ---
 
-# The Manifest Philosophy
+# Overview
+
+## Documentation to Code Flow
 
 ```
 ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
@@ -39,6 +41,8 @@ Every repository must contain:
 * `docs/`: The V0 site (Astro/Starlight).
 * `README.md`: Local setup instructions.
 
+---
+
 ## The Documentation Manifest
 
 Every V0 documentation site generates a machine-readable `manifest.json` file that serves as a **structured index for AI consumption**. This manifest is the bridge between human-readable documentation and AI-augmented development.
@@ -63,9 +67,17 @@ When you start a new project following this playbook, your AI assistant can:
 
 ### Example: This Playbook's Manifest
 
-This playbook's manifest is available at:  
+:::tip[Try It Now]
+This playbook's manifest is live at:  
 **[https://kandala05.github.io/team-playbook/manifest.json](https://kandala05.github.io/team-playbook/manifest.json)**
 
+Try it in your terminal:
+```bash
+curl https://kandala05.github.io/team-playbook/manifest.json | jq
+```
+:::
+
+Here's what the manifest looks like:
 ```json
 {
   "name": "team-playbook",
@@ -152,5 +164,7 @@ Every project following this playbook should include a `scripts/generate-manifes
 ```
 
 The script creates `public/manifest.json` which gets deployed with your documentation site.
+
+## Learn More
 
 See the [Bootstrap Guide](/team-playbook/how-to/bootstrap/) for implementation details, or the [Manifest Schema Reference](/team-playbook/reference/manifest-schema/) for the complete JSON schema.
