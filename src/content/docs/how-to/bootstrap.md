@@ -56,3 +56,8 @@ Your final directory should look like this:
 - .gitignore
 
 
+---
+
+:::tip[See It In Action]
+The [Support App](https://kandala05.github.io/support-app/) was built following this exact bootstrap process. Explore its [MANIFEST.md](https://github.com/kandala05/support-app/blob/main/MANIFEST.md), documentation structure, and interactive prototypes as a working reference.
+:::
